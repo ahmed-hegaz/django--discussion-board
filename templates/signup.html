@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+
+
+<div class="container">
+    <h1>signup</h1>
+    <form method="post">
+        {%csrf_token%}
+            {% include 'includes/form.html'%}
+
+         <button type="submit" class="btn btn-success">create new user</button>
+    </form>
+<div class="card-footer text-muted text-center">
+    Already have an account ? <a href="{%url 'login'%}">login</a>
+</div>
+</div>
+{% endblock %}
